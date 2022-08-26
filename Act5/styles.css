@@ -1,0 +1,51 @@
+/*1. Aplica un color de fondo en el body*/
+body {
+    background-color: blue;
+}
+
+/*2. Convierte a negritas el texto de los spans*/
+span {
+    font-weight: bold;
+}
+
+/*3. Justifica el texto del párrafo*/
+p {
+    text-align: justify;
+}
+
+/*4. Subraya un título*/
+h1 {
+    text-decoration: underline;
+}
+
+/*5. Transforma en mayúsculas otro de los títulos*/
+h2 {
+    text-transform: uppercase;
+}
+
+/*6. Cambia la tipografía de todos los títulos a "Verdana"*/
+h1, h2 {
+    font-family: Verdana, sans-serif;
+}
+
+/*7. Remueve el subrayado de todos los links*/
+a {
+    color: white;
+    text-decoration: none;
+}
+
+/*8. Cambia uno de los links a color rojo*/
+a[href="http://www.google.com"] {
+    color: red;
+}
+
+/*9. Agrega a la imagen márgenes superior, inferior, derecho e izquierdo. de color rojo*/
+img {
+    margin: 10px 10px 10px 10px;
+    border: 1px solid red;
+}
+
+/*10. Coloca un borde inferior de color a la cita en bloque*/
+blockquote {
+    border-bottom: 1px solid red;
+}
