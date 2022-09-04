@@ -1,0 +1,53 @@
+/* Add background color*/
+body {
+    background-color: #3cb8da;
+}
+
+/*Change talbe style for border 1px solid black*/
+table,tr,th,td {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+/*Change title to red color and center, underlined*/
+h1 {
+    color: white;
+    background-color: #034475;
+    text-align: center;
+    text-decoration: underline;
+    /*Add a rounded square*/
+    border-radius: 25px;
+}
+
+/*Change bold to bigger size and italics*/
+b {
+    font-size: 1.5em;
+    font-style: italic;
+    color: #052844;
+}
+
+/*Change paragraph to bigger size*/
+p {
+    font-size: 1.5em;
+}
+
+/*Change table to bigger size*/
+table {
+    font-size: 1.5em;
+}
+
+/*Change list elements to bigger size */
+li {
+    font-size: 1.5em;
+    /* Change list style*/
+    list-style-type: circle;
+    list-style-position: inside;
+}
+
+/*Move image to right and increase size*/
+img {
+    float: right;
+    margin: 0 0 0 0;
+    width: 600px;
+    height: 700px;
+}
