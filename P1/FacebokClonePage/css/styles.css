@@ -1,58 +1,80 @@
-body{
+body {
     background: #f0f2f5;
 }
 
-.container{
+.container {
     margin-top: 200px;
 }
 
-img{
+img {
     width: 106px;
-    height: -28%;
+    height: 28%;
 }
 
-.parrafo-izquierdo{
+.parrafo-izquierdo {
     margin-top: 10px;
     font-size: 24px;
     line-height: 28px;
     width: auto;
 }
 
-.caja{
+.caja {
     background: #FFFFFF;
-    padding:15px;
+    border-radius: 10px;
+    align-items: center;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2), 0 8px 16px rgba(0, 0, 0, .2);
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 400px;
+    padding: 40px 40px 36px;
+    display: block;
+    width: auto;
 }
 
-.caja input{
-    padding: 15px;
+.caja input {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid #e9ebee;
+    width: 100%;
 }
 
-.caja .btn-ini{
+.caja .btn-ini {
     background-color: #1877f2;
     border: none;
     border-radius: 6px;
-    font-size:20px;
+    font-size: 20px;
     line-height: 48px;
-    padding: 0 16px;
-    width: 100%;
+    padding: 10px;
     color: #FFFFFF;
+    width: 100%;
 }
 
-.password{
-    color:  #1877f2;
+.password {
+    color: #1877f2;
     font-size: 14px;
     font-weight: 500;
     display: block;
     text-align: center;
+    margin-top: 15px;
 }
 
-.cuenta{
+.cuenta {
     background-color: #42b72a;
     font-size: 17px;
     color: #FFFFFF;
     border: none;
     padding: 12px 16px;
-    display: block;
-    margin: 10px auto 0;
+    margin-top: 15px;
     border-radius: 5px;
+    /* Center button to center of the box */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }

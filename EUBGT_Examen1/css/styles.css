@@ -1,0 +1,46 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+/*Add border to headers of table*/
+table, tr, th{
+    border: 1px solid #ddd;
+}
+
+p {
+    text-align: justify;
+}
+
+h3 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+.card{
+    padding: 20px;
+    margin: 20px;
+}
+
+/*Make carrousel slide automatically every 3 seconds*/
+.carousel-item {
+    height: 500px;
+    background-color: #777;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-animation: slide 3s ease-in-out infinite alternate;
+    animation: slide 3s ease-in-out infinite alternate;
+}
+
+#carouselExampleInterval{
+    margin: 20px;
+}

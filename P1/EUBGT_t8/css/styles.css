@@ -3,9 +3,9 @@ body {
     background-color: #3cb8da;
 }
 
-/*Change talbe style for border 1px solid black*/
-table,tr,th,td {
-    border-collapse: collapse;
+/*Change table style for border 1px solid black*/
+table, tr, th, td {
+    border-collapse: collapse; /*Propiedad nueva*/
     border: 1px solid black;
 }
 
@@ -15,8 +15,7 @@ h1 {
     background-color: #034475;
     text-align: center;
     text-decoration: underline;
-    /*Add a rounded square*/
-    border-radius: 25px;
+    border-radius: 25px; /*Propiedad nueva*/
 }
 
 /*Change bold to bigger size and italics*/
@@ -40,13 +39,13 @@ table {
 li {
     font-size: 1.5em;
     /* Change list style*/
-    list-style-type: circle;
-    list-style-position: inside;
+    list-style-type: circle; /*Propiedad nueva*/
+    list-style-position: inside; /*Propiedad nueva*/
 }
 
 /*Move image to right and increase size*/
 img {
-    float: right;
+    float: right; /*Propiedad nueva*/
     margin: 0 0 0 0;
     width: 600px;
     height: 700px;

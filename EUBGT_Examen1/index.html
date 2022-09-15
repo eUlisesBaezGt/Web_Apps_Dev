@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>EXAMEN 1</title>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+            crossorigin="anonymous"
+    />
+</head>
+<body>
+
+<!-- Creación de un pequeño sitio Web estático que use los estilos y componentes de Bootstrap.
+La temática, contenidos y estilos del sitio son libres, pero deberá tener al menos las
+siguientes características:
+
+El sitio estará formado por al menos 3 páginas enlazadas entre sí con contenidos
+estáticos. (4 puntos)
+
+Ser completamente responsive, de forma que se adapte tanto a pantallas extra
+pequeñas de smartphone como a tablets y pantallas más grandes de laptop y de
+escritorio. Para el caso de computadoras el sitio deberá tener 3 columnas y al
+cambiar a moviles será solo 1 como el ejemplo a continuación (3 puntos)
+-->
+
+<!--      Tener una barra de navegación principal que se contraiga cuando la pantalla sea
+           pequena. Esta barra tendrá al menos:
+          a. Dos enlaces.
+         b. Una imagen como logotipo.
+         c. Un buscador (aunque no sea funcional).
+         (5 puntos)-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="img/up.png" alt="" width="30" height="24"
+                 class="d-inline-block align-text-top"> ESCUDO UP
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="HTML/form.html">FORMULARIO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="HTML/table.html">TABLA</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="HTML/fichas.html">FICHAS</a>
+                </li>
+
+                <!-- SEARCH -->
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <h3>Columna 1</h3>
+                <p>Esta es la prueba de la columna 1...</p>
+                <p>Aquí sigue el texto de la columna 1... Aquí sigue el texto de la columna 1... </p>
+            </div>
+            <div class="col-sm-4">
+                <h3>Columna 2</h3>
+                <p>Esta es la prueba de la columna 2...</p>
+                <p>Aquí sigue el texto de la columna 2... Aquí sigue el texto de la columna 2... </p>
+            </div>
+            <div class="col-sm-4">
+                <h3>Columna 3</h3>
+                <p>Esta es la prueba de la columna 3...</p>
+                <p>Aquí sigue el texto de la columna 3... Aquí sigue el texto de la columna 3... </p>
+            </div>
+        </div>
+    </div>
+
+<!--        Un carousel en la página principal con tres imágenes. Modifica el intervalo para que
+            las imágenes se muestren durante 3 segundos. (3 puntos)-->
+<div class="row">
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="3000">
+                <img src="img/red.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="img/green.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="img/blue.png" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+
+<!-- 4. Contener los siguientes elementos (un ejemplo de cada uno en alguna de las páginas
+del sitio web):
+a. Botones.   (FORMULARIO)
+b. Un desplegable. (FORMULARIO)
+c. Una sección con fichas o pestañas. (FICHAS)
+d. Un formulario horizontal. (FORMULARIO)
+e. Una tabla responsive con bordes y de tipo striped. (TABLA) -->
+
+</body>
+</html>
