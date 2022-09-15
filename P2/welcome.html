@@ -1,0 +1,30 @@
+<!-- Escribe un programa que pregunte al usuario su nombre, su apellido y le dé un 
+    mensaje de bienvenida con su nombre completo. -->
+
+function validateForm() { let x = document.forms["myForm"]["fname"].value; if (x
+== "") { alert("Name must be filled out"); return false; } }
+
+
+
+<!DOCTYPE html>
+<html>
+    <script>
+        <form
+  name="myForm"
+  action="/action_page.php"
+  onsubmit="return validateForm()"
+  method="post"
+>
+  Name: <input type="text" name="fname" />
+  <input type="submit" value="Submit" />
+</form>
+
+    </script>
+    <head></head>
+    <title>EUBGT</title>
+    
+    <body> 
+        <h1>Enrique Ulises Báez Gómez Tagle</h1>
+        <p>Hoy en día todo el mundo necesita estas habilidades, y aquí puedes llevarte hasta el límite y convertirte en el mejor desarrollador del mundo.</p>
+    </body> 
+</html> 
