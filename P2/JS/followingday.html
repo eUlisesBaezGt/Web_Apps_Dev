@@ -1,0 +1,55 @@
+<!-- Ecribe un programa que pregunte al usuario qué día de la semana es y le devuelva qué día sigue. Deben tomarse en cuenta las entradas incorrectas. -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function next_day() {
+        let day = document.forms["following_day"]["actual_day"].value;
+        if (day == "Monday") {
+          alert("Next day: Tuesday");
+        } else if (day == "Tuesday") {
+            alert("Next day: Wednesday");
+        } else if (day == "Wednesday") {
+            alert("Next day: Thursday");
+        } else if (day == "Thursday") {
+            alert("Next day: Friday");
+        } else if (day == "Friday") {
+            alert("Next day: Saturday");
+        } else if (day == "Saturday") {
+            alert("Next day: Sunday");
+        } else if (day == "Sunday") {
+            alert("Next day: Sunday");
+        } else {
+          alert("Please enter a valid day");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h2>FOLLOWING DAY</h2>
+
+    <form
+      name="following_day"
+      action="/action_page.php"
+      onsubmit="return next_day()"
+      method="post"
+    >
+      <!-- Create a dropdown to select actual day-->
+      <select name="actual_day" id="actual_day">
+        <option value="Monday">Monday</option>
+        <option value="Tuesday">Tuesday</option>
+        <option value="Wednesday">Wednesday</option>
+        <option value="Thursday">Thursday</option>
+        <option value="Friday">Friday</option>
+        <option value="Saturday">Saturday</option>
+        <option value="Sunday">Sunday</option>
+      </select>
+
+      <br /><br />
+      <!-- Create a button to send data -->
+      <input type="submit" value="Submit" />
+      </div>
+    </form>
+  </body>
+</html>

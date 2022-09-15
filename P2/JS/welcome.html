@@ -1,0 +1,35 @@
+<!-- Escribe un programa que pregunte al usuario su nombre, su apellido y le dé un 
+    mensaje de bienvenida con su nombre completo. -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function validateForm() {
+        let x = document.forms["myForm"]["fname"].value;
+        let y = document.forms["myForm"]["lastname"].value;
+        if (x == ""|| y == "") {
+          alert("Fill all first");
+          return false;
+        }
+        else{
+            alert("Welcome " + x + " " + y);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Welcome</h2>
+
+    <form
+      name="myForm"
+      action="/action_page.php"
+      onsubmit="return validateForm()"
+      method="post"
+    >
+      Name: <input type="text" name="fname" />
+      LastName: <input type="text" name="lastname" />
+      <input type="submit" value="Submit" />
+      </form>
+  </body>
+</html>

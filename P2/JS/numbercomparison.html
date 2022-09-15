@@ -1,0 +1,34 @@
+<!-- Escribe un programa que reciba 2 valores, los compare y devuelva un mensaje apropiado para todos los casos. -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function compare() {
+        let x = document.forms["comparison"]["num1"].value;
+        let y = document.forms["comparison"]["num2"].value;
+        if (x == y) {
+          alert("Los números son iguales");
+        } else if (x > y) {
+          alert("El primer número es mayor");
+        } else {
+            alert("El segundo número es mayor");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h2>COMPARISON</h2>
+
+    <form
+      name="comparison"
+      action="/action_page.php"
+      onsubmit="return compare()"
+      method="post"
+    >
+      Number 1: <input type="number" name="num1" />
+      Number 2: <input type="number" name="num2" />
+      <input type="submit" value="compare" />
+      </form>
+  </body>
+</html>

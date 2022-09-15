@@ -1,0 +1,27 @@
+<!-- Escribe un programa en el que el usuario ingrese una temperatura en grados Celsius y éste los convierta a grados Farenheit. -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function convert() {
+        let x = document.forms["temperature"]["temp"].value;
+        let y = (x * 9) / 5 + 32;
+        alert("Temperature: " + y);
+      }
+    </script>
+  </head>
+  <body>
+    <h2>TEMPERATURE</h2>
+
+    <form
+      name="temperature"
+      action="/action_page.php"
+      onsubmit="return convert()"
+      method="post"
+    >
+      Temperature: <input type="number" name="temp" />
+      <input type="submit" value="Convert" />
+    </form>
+  </body>
+</html>
