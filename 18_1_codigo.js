@@ -3,6 +3,6 @@
     {/* Después del primer mensaje, se debe mostrar otro mensaje que diga "Soy el primer script" */}
     console.log("Soy el primer script");
     {/* Añadir en la página XHTML un mensaje de aviso para los navegadores que no tengan activado el soporte de JavaScript */}
-    alert("Este sitio web requiere JavaScript para funcionar correctamente");
-    
+    console.log("Este sitio web requiere JavaScript para funcionar correctamente");
+
     </script>
