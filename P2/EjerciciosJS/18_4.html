@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+    <title>El primer script</title>
+
+    <script type="text/javascript">
+        var valores = [true, 5, false, "hola", "adios", 2];
+        var val2;
+        for (var value in valores) {
+            // IF THE ELEMENT IS A STRING
+            if (typeof valores[value] == "string") {
+                val = valores[value];
+                for (value2 in valores) {
+                    if (typeof valores[value2] == "string") {
+                        if (valores[value2] !== val) {
+                            val2 = valores[value2];
+                        }
+                    }
+                }
+            }
+        }
+        if (val2.length > val.length) {
+            alert(val2 + " es mayor que " + val);
+        } else {
+            alert(val2 + " es menor que " + val);
+        }
+
+        // Utilizando exclusivamente los dos valores booleanos del array, determinar los operadores necesarios para obtener un resultado true y otro resultado false
+        for (value in valores) {
+            if (typeof valores[value] == "boolean") {
+                val = valores[value];
+                for (value2 in valores) {
+                    if (typeof valores[value2] == "boolean") {
+                        if (valores[value2] !== val) {
+                            val2 = valores[value2];
+                        }
+                    }
+                }
+            }
+        }
+        alert(val + " && " + val2 + " = " + (val && val2));
+        alert(val + " || " + val2 + " = " + (val || val2));
+
+
+        // Determinar el resultado de las cinco operaciones matemáticas realizadas con los dos elementos numéricos
+        for (value in valores) {
+            if (typeof valores[value] == "number") {
+                val = valores[value];
+                for (value2 in valores) {
+                    if (typeof valores[value2] == "number") {
+                        if (valores[value2] !== val) {
+                            val2 = valores[value2];
+                        }
+                    }
+                }
+            }
+        }
+        alert("La suma de " + val + " y " + val2 + " es " + (val + val2));
+        alert("La resta de " + val + " y " + val2 + " es " + (val - val2));
+        alert("La multiplicación de " + val + " y " + val2 + " es " + (val * val2));
+        alert("La división de " + val + " y " + val2 + " es " + (val / val2));
+        alert("El módulo de " + val + " y " + val2 + " es " + (val % val2));
+
+
+    </script>
+</head>
+
+<body></body>
+</html>
