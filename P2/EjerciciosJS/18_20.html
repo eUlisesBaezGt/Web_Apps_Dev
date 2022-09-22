@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+    <title></title>
+
+    <style type="text/css">
+        body {
+            font-family: arial, helvetica, serif;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function lim(ev, limChar) {
+            var element = document.getElementById("text");
+
+            var evento = ev || window.event;
+            var charCode = evento.charCode || evento.keyCode;
+
+            if (charCode === 37 || charCode === 39) {
+                return true;
+            }
+
+            if (charCode === 8 || charCode === 46) {
+                return true;
+            } else return element.value.length < limChar;
+        }
+
+        function update(limChar) {
+            var element = document.getElementById("text");
+            var info = document.getElementById("info");
+
+            if (element.value.length >= limChar) {
+                info.innerHTML = "Máximo " + limChar + " caracteres";
+            } else {
+                info.innerHTML = "Puedes escribir hasta " + (limChar - element.value.length) + " caracteres adicionales";
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+
+<div id="info">Máximo 100 caracteres</div>
+<textarea id="text" onkeypress="return lim(event, 100);" onkeyup="update(100)" rows="6" cols="30"></textarea>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+    <title></title>
+
+    <script type="text/javascript">
+        // Definir la siguiente jerarquía de objetos, haciendo uso de los prototipos de JavaScript:
+        // Objeto Persona con las propiedades nombre, edad y género, y el método obtDetalles(), que muestra por pantalla las propiedades de la persona.
+        let persona = {
+            nombre: "Juan",
+            edad: 25,
+            genero: "Masculino",
+            obtDetalles: function () {
+                return this.nombre + " " + this.edad + " " + this.genero;
+            }
+        }
+
+        // Objeto Estudiante, que hereda de Persona, e incluye las propiedades curso y grupo y el método registrar().
+        let estudiante = Object.create(persona);
+        estudiante.curso = "2º";
+        estudiante.grupo = "A";
+        estudiante.registrar = function () {
+            return this.nombre + " " + this.edad + " " + this.genero + " " + this.curso + " " + this.grupo;
+        }
+        // Objeto Profesor, que hereda de Persona, e incluye las propiedades asignatura y nivel y el método asignar().
+        let profesor = Object.create(persona);
+        profesor.asignatura = "Matemáticas";
+        profesor.nivel = "3";
+        profesor.asignar = function () {
+            return this.nombre + " " + this.edad + " " + this.genero + " " + this.asignatura + " " + this.nivel;
+        }
+        // Crear los objetos y casos de prueba necesarios para comprobar el correcto funcionamiento de la jerarquía.
+
+    </script>
+</head>
+
+<body>
+
+</body>
+</html>

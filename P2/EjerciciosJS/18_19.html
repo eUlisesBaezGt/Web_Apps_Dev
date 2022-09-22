@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+    <title></title>
+
+    <style type="text/css">
+        body {
+            font-family: arial, helvetica, serif;
+        }
+
+        #info {
+            width: 160px;
+            border: thin solid silver;
+            padding: .5em;
+            position: fixed;
+        }
+
+        #info h1 {
+            margin: 0;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function info(ev) {
+            var event = ev || window.event;
+
+            var X = event.clientX;
+            var Y = event.clientY;
+
+            var dims = sizeBrWin();
+            var xSize = dims[0];
+            var ySize = dims[1];
+
+            var HorzPos = "";
+            var VerPos = "";
+
+            if (X > xSize / 2) {
+                HorzPos = "right";
+            } else {
+                HorzPos = "left";
+            }
+
+            if (Y > ySize / 2) {
+                VerPos = "down";
+            } else {
+                VerPos = "up";
+            }
+
+            showInfo(['Location', HorzPos, VerPos]);
+        }
+
+        function showInfo(mess) {
+            document.getElementById("info").innerHTML = '<h1>' + mess[0] + '</h1>';
+            for (var i = 1; i < mess.length; i++) {
+                document.getElementById("info").innerHTML += '<p>' + mess[i] + '</p>';
+            }
+        }
+
+        function sizeBrWin() {
+            var dims = [];
+
+            if (typeof (window.innerWidth) == 'number') {
+                // No es IE
+                dims = [window.innerWidth, window.innerHeight];
+            } else if (document.documentElement && (document.documentElement.clientWidth || document.documentElement.clientHeight)) {
+                //IE 6 en modo estandar (no quirks)
+                dims = [document.documentElement.clientWidth, document.documentElement.clientHeight];
+            } else if (document.body && (document.body.clientWidth || document.body.clientHeight)) {
+                //IE en modo quirks
+                dims = [document.body.clientWidth, document.body.clientHeight];
+            }
+
+            return dims;
+        }
+
+        document.onclick = info;
+
+    </script>
+</head>
+
+<body>
+
+<div id="info"></div>
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+</body>
+</html>
