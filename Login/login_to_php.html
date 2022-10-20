@@ -1,0 +1,38 @@
+<!--
+Diseñar un registro y login en PHP
+El registro deberá contener:
+Nombre
+Apellidos
+Correo
+Password y verificación de password
+
+Deberán validar que los passwords son iguales y que contengan 8 caracteres y una mayúscula.
+-->
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Registro</title>
+</head>
+<body>
+    <h1>Registro</h1>
+    <form action="login_to_php.php" method="post">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre" required>
+        <br>
+        <label for="apellido">Apellido</label>
+        <input type="text" name="apellido" id="apellido" required>
+        <br>
+        <label for="email">Correo</label>
+        <input type="email" name="email" id="email" required>
+        <br>
+        <label for="pass">Password</label>
+        <input type="password" name="pass" id="pass" required>
+        <br>
+        <label for="$password_check">Verificar Password</label>
+        <input type="password" name="$password_check" id="$password_check" required>
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
