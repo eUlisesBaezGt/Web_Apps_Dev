@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <style>
         table, th, td {
@@ -28,18 +28,18 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     echo "<table><tr><th>Numero de Opcion</th><th>Cantidad de Pedidos </th><th>Porcentaje</th></tr>";
-    while ($row = $result->fetch_assoc()) {
-        $sql2 = "SELECT COUNT(*) AS total FROM pedidos";
-        $result2 = $conn->query($sql2);
-        $row2 = $result2->fetch_assoc();
-        $total = $row2["total"];
-        $sql3 = "SELECT COUNT(*) AS total FROM pedidos WHERE numopc = " . $row["numopc"];
-        $result3 = $conn->query($sql3);
-        $row3 = $result3->fetch_assoc();
-        $totalOpcion = $row3["total"];
-        $porcentaje = ($totalOpcion / $total) * 100;
-        echo "<tr><td>" . $row["numopc"] . "</td><td>" . $totalOpcion . "</td><td>" . $porcentaje . "%</td></tr>";
+
+    $sql2 = "SELECT COUNT(*) AS total FROM pedidos";
+    $result2 = $conn->query($sql2);
+    $row2 = $result2->fetch_assoc();
+    $total = $row2["total"];
+    $sql3 = "SELECT numopc, COUNT(*) AS total FROM pedidos GROUP BY numopc";
+    $result3 = $conn->query($sql3);
+    while ($row3 = $result3->fetch_assoc()) {
+        $porcentaje = ($row3["total"] / $total) * 100;
+        echo "<tr><td>" . $row3["numopc"] . "</td><td>" . $row3["total"] . "</td><td>" . $porcentaje . "%</td></tr>";
     }
+
     echo "</table>";
     $sql4 = "SELECT numopc, COUNT(*) AS total FROM pedidos GROUP BY numopc ORDER BY total DESC LIMIT 1";
     $result4 = $conn->query($sql4);
@@ -50,7 +50,6 @@ if ($result->num_rows > 0) {
     $result5 = $conn->query($sql5);
     $row5 = $result5->fetch_assoc();
     echo "<h1>El total de compras es de " . $total . "</h1>";
-
 
 } else {
     echo "0 results";

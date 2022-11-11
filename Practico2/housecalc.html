@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Calculadora de valor futuro de propiedad</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <style>
+        @media only screen and (max-width: 600px) {
+        .desglose {
+            display: none;
+        }
+        }
+        @media only screen and (max-width: 600px) {
+        .col {
+            width: 100%;
+        }
+        }
+    </style>
+    <script>
+        function calcValorAno2(valorActual, inflacion) {
+            let inf = parseInt(inflacion);
+            let val = parseInt(valorActual);
+            console.log(inf);
+            console.log(val);
+            let valorAno2 = val * (1 + (inf * 0.01));
+            console.log(valorAno2);
+            return valorAno2;
+        }
+
+        function calcValorAno3(valorActual, inflacion) {
+            let valora2 = calcValorAno2(valorActual, inflacion);
+            let val = parseInt(valora2);
+            let inf = parseInt(inflacion);
+            let valorAno3 = val * (1 + (inf * 0.01));
+            return valorAno3;
+        }
+
+
+        function calcValores () {
+            let valorActual = document.getElementById("valorActual").value;
+            let inflacion = document.getElementById("inflacion").value;
+            let valora2 = calcValorAno2(valorActual, inflacion);
+            let valora3 = calcValorAno3(valorActual, inflacion);
+            document.getElementById("vfa1").value = valorActual;
+            document.getElementById("vfa2").value = valora2;
+            document.getElementById("vfa3").value = valora3;
+            document.getElementById("resultado").innerHTML = `Si compras una propiedad y existe una inflación anual del ${inflacion} %, el bien que hoy vale $${valorActual} en 3 años valdrá $${valora3}.`;
+        }
+    </script> -->
+
+    <script src="script.js"></script>
+</head>
+<body>
+<div class="container text-center">
+    <h1>Calculadora de Valor Futuro de Propiedad</h1>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h2>Valor Actual</h2>
+            <form id="calcV">
+                <div class="mb-3">
+                    <label for="valorActual" class="form-label">Valor Actual</label>
+                    <input type="number" class="form-control" id="valorActual" name="valorActual" placeholder="Valor Actual">
+                </div>
+                <div class="mb-3">
+                    <label for="inflacion" class="form-label">Inflación</label>
+                    <input type="number" class="form-control" id="inflacion" name="inflacion" placeholder="Porcentaje de Inflación">
+                </div>
+
+            </form>
+            <button onclick="calcValores()" class="btn btn-primary">Calcular</button>
+        </div>
+        <div class="col">
+            <h2>Valor Futuro</h2>
+            <div class="mb-3">
+                <h3>Desglose por año</h2>
+                    <div class="mb-3" id="desglose">
+                        <label for="vfa1" class="form-label">Valor al año 1</label>
+                        <input type="number" class="form-control" id="vfa1" name="vfa1" placeholder="Valor Año 1" value="0" disabled>
+                        <label for="vfa2" class="form-label">Valor al año 2</label>
+                        <input type="number" class="form-control" id="vfa2" name="vfa2" placeholder="Valor Año 2" value="0" disabled>
+                        <label for="vfa3" class="form-label">Valor al año 3</label>
+                        <input type="number" class="form-control" id="vfa3" name="vfa3" placeholder="Valor Año 3" value="0" disabled>
+                    </div>
+                    <p>Resultado:</p>
+                    <p id="resultado">
+                    </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>
+

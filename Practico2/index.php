@@ -2,65 +2,58 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <title>ChilamBalon</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
+
 <body>
 <!--Ejercicio 2 (valor 5 puntos): Fueron contratados por ChilamBalon (marca registrada) para
 generar un quiosco de pedidos en tabletas afuera del establecimiento, el pedido será
 pagado al momento de la entrega, por lo que no es necesario procesar el pago. Todos los
 menús deberán de tener un opc. El número de pedidos debe de ser dado por quiosco.-->
 
-<h1>MENU ChilamBalon</h1>
-<img src="img/1.jpg" alt="1" width="200" height="200">
-<img src="img/2.jpg" alt="2" width="200" height="200">
-<img src="img/3.jpg" alt="3" width="200" height="200">
 
-<form action="respuesta.php" method="post">
-    <input type="radio" name="pedido" value="1">1. Tablet<br>
-    <input type="radio" name="pedido" value="2">2. iPad<br>
-    <input type="radio" name="pedido" value="3">3. Samsung Tab<br> <br>
-    
-    <input type="text" name="nombre" placeholder="Nombre completo"> <br>
+<div class="container">
+    <h1>MENU ChilamBalon</h1>
+    <div class="row">
+        <div class="col-sm">
+            <img src="img/1.jpg" alt="1" width="70%" height="200">
+        </div>
+        <div class="col-sm">
+            <img src="img/2.jpg" alt="2" width="70%" height="200">
+        </div>
+        <div class="col-sm">
+            <img src="img/3.jpg" alt="3" width="70%" height="200">
+        </div>
+    </div>
+</div>
 
-    <p>Costo total: $<span id="opc"></span></p>
-    <script>
-        var opc = document.getElementsByName("pedido");
-        var opcTotal = document.getElementById("opc");
-        
-        function mostraropc() {
-            if (opc[0].checked) {
-                opcTotal.innerHTML = "1000";
-            }
-            else if (opc[1].checked) {
-                opcTotal.innerHTML = "2000";
-            }
-            else if (opc[2].checked) {
-                opcTotal.innerHTML = "3000";
-            }
-            else {
-                opcTotal.innerHTML = "0";
-            }
-        }
-        opc[0].addEventListener("click", mostraropc);
-        opc[1].addEventListener("click", mostraropc);
-        opc[2].addEventListener("click", mostraropc);
-    </script>
+<div class="container">
+    <form action="respuesta.php" method="post">
+        <p>Opcion deseada para el pedido: </p>
+        <label>
+            <input type="radio" name="pedido" value="1">
+        </label>1) Tablet<br>
+        <label>
+            <input type="radio" name="pedido" value="2">
+        </label>2) iPad<br>
+        <label>
+            <input type="radio" name="pedido" value="3">
+        </label>3) Samsung Tab<br> <br>
 
-    <input type="submit" value="Enviar">
+        <label>
+            <input type="text" name="nombre" placeholder="Nombre completo">
+        </label> <br> <br>
 
-</form>
+        <p>Costo total: $<span id="opc"></span></p>
 
+        <script>updatecost();</script>
 
-
-
-
-
-<!-- Boton de enviar -->
-
-<!-- Al enviar el pedido, en caso de ser registrado correctamente, lo llevas a una página que dice pedido registrado y toma el nombre escrito en el formulario y añade un boton con la opcion de volver a comprar -->
-<!-- En caso de no ser registrado correcctamente, informar en una nueva pantalla PHp -->
-
-
-
+        <input type="submit" value="Enviar">
 </body>
 </html>
