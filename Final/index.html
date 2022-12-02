@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--Un cliente acaba de abrir un gimnasio y los contrata para hacer su sistema de registro y cobros a los nuevos usuarios, por-->
+<!--lo que es necesario generar los siguientes documentos:-->
+<!--1. registro.php.- Este es el registro de nuevos usuarios, es necesario poner el monto pagado por el usuario.-->
+<!--2. clientes.php.- En este archivo se deberán de listar todos los usuarios que han pagado hasta el momento. Se puede-->
+<!--generar la tabla de usuarios como ustedes consideren.-->
+<!--1. Los valores deberán ser ingresados a través de inputs, no del prompt.-->
+<!--2. El input de monto depositado estilo CSS diferente.-->
+<!--3. Se debe validar que los valores ingresados sean números en el caso del monto depositado.-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Registro Gimnasio</title>
+</head>
+
+<body style="background-color:#e5b355;">
+<div class="form-group">
+    <form action="registro.php" method="post">
+        <br><br>
+        <div>
+            <h1 class="text-center">Registro Gimnasio</h1>
+        </div>
+        <br><br>
+        <div class="container">
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10">
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-12">
+                            <label for="nombre">Nombre: </label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre">
+                            <br>
+                        </div>
+                        <div class="col-lg-6 col-sm-12">
+                            <label for="apellido">Apellido: </label>
+                            <input type="text" class="form-control" id="apellido" name="apellido"
+                                   placeholder="Apellido">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-12">
+                            <label for="membresia">Tipo de membresía: </label>
+                            <select class="form-select" id="membresia" name="membresia">
+                                <option selected>Seleccionar</option>
+                                <option value="Mensual">Mensual</option>
+                                <option value="Trimestral">Trimestral</option>
+                                <option value="Semestral">Semestral</option>
+                                <option value="Anual">Anual</option>
+                            </select>
+                            <br>
+                        </div>
+
+                        <!--2. El input de monto depositado estilo CSS diferente.-->
+                        <!--3. Se debe validar que los valores ingresados sean números en el caso del monto depositado.-->
+                        <div class="col-lg-6 col-sm-12">
+                            <label for="monto">Monto depositado: </label>
+                            <input type="number" class="form-control" id="monto" name="monto" placeholder="Monto" step=".0001"
+                                   style="background-color: #98a1e8">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-lg-5 col-md-5 col-sm-12"></div>
+                        <div class="col-6">
+                            <button type="submit" class="btn btn-primary">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1"></div>
+            </div>
+        </div>
+    </form>
+</div>
+
+</body>
+
+</html>
